@@ -13,8 +13,8 @@
      * This lab tests your ability to implement recursion for several functions.
      * 
      * @authors: Stephen, Mukhtar, MoSho
-     * @editer: YOUR_NAME_HERE
-     * @version DATE_HERE
+     * @editer: Matt Whitehead
+     * @version March 31, 2019
      */
 
     /** **********************************************************************
@@ -33,8 +33,10 @@
          * Here is the base case (ending condition): value == 1.
          * This lets our recursion know when to stop.
          */
-        //TODO
-
+	//TODO
+        if(value == 1) {
+	return value;
+	}
 
         /*
          * Here is the recursive statement. The function calls itself when the 
@@ -45,7 +47,9 @@
          * By doing this, we break up the equation n! into n! = n * (n-1)!.
          */
         //TODO
-
+	int output = value * value;
+	System.out.println(factorial(value-1));
+	return output;
     }
 
     /** **********************************************************************
@@ -67,6 +71,12 @@
     public int fibonacci(int n)
     {
         //TODO
+	if (n == 1)
+		return 1;
+	if (n == 0)
+		return 0;
+
+	return fibonacci(n-1) + fibonacci(n-2);
     }
 
     
@@ -100,21 +110,26 @@
         public Tree(int value)
         {
     	    //TODO
+	children = new ArrayList<>(value);
+	this.value = value;
         }
     
         public int getValue()
         {
     	    //TODO
+	return 0; //change this
         }
     
         public ArrayList<Tree> getChildren()
         {
     	    //TODO
+	return null;
         }
     
         public void add(Tree child)
         {
     	    //TODO
+	
         }
     }
     
@@ -152,6 +167,7 @@
         }
         
     	//TODO
+	return 0;
     }
 
     /** **********************************************************************
@@ -165,6 +181,7 @@
     public int treeSum(Tree tree)
     {
     	//TODO
+	return 0;
     }
     
     /** **********************************************************************
