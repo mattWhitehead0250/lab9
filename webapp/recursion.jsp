@@ -117,19 +117,19 @@
         public int getValue()
         {
     	    //TODO
-	return 0; //change this
+	return value;
         }
     
         public ArrayList<Tree> getChildren()
         {
     	    //TODO
-	return null;
+	return children;
         }
     
         public void add(Tree child)
         {
     	    //TODO
-	
+	children.add(child);
         }
     }
     
