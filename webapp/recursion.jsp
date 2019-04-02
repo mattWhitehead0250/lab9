@@ -180,7 +180,13 @@
     public int treeSum(Tree tree)
     {
     	//TODO
-	return 0;
+	ArrayList<Tree> chillens = tree.getChildren();
+    int total = 0;
+
+    for (int i = 0; i < chillens.size(); i++){
+        total += chillens.get(i).getValue();
+    }
+    return total + tree.getValue();
     }
     
     /** **********************************************************************
