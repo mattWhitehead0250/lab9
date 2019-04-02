@@ -162,10 +162,11 @@
         if (height == 1) 
         {
     	    //TODO
+            return branchingFactor;
         }
         
     	//TODO
-	return 0;
+	    return nnaryTreeSize(branchingFactor, height -1) + (int)Math.pow(branchingFactor, height);
     }
 
     /** **********************************************************************
