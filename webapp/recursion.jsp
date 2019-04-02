@@ -34,8 +34,8 @@
          * This lets our recursion know when to stop.
          */
 	//TODO
-        if(value == 1) {
-	return value;
+    if(value == 1) {
+	    return value;
 	}
 
         /*
@@ -47,9 +47,7 @@
          * By doing this, we break up the equation n! into n! = n * (n-1)!.
          */
         //TODO
-	int output = value * value;
-	System.out.println(factorial(value-1));
-	return output;
+	return factorial(value-1) * value;
     }
 
     /** **********************************************************************
@@ -73,8 +71,8 @@
         //TODO
 	if (n == 1)
 		return 1;
-	if (n == 0)
-		return 0;
+	if (n == 2)
+		return 1;
 
 	return fibonacci(n-1) + fibonacci(n-2);
     }
@@ -110,26 +108,26 @@
         public Tree(int value)
         {
     	    //TODO
-	children = new ArrayList<>(value);
+	children = new ArrayList<Tree>();
 	this.value = value;
         }
     
         public int getValue()
         {
     	    //TODO
-	return value;
+	        return value;
         }
     
         public ArrayList<Tree> getChildren()
         {
     	    //TODO
-	return children;
+	        return children;
         }
     
         public void add(Tree child)
         {
     	    //TODO
-	children.add(child);
+	        children.add(child);
         }
     }
     
